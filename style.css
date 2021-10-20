@@ -1,0 +1,368 @@
+
+{box-sizing: border-box;}
+body {
+  background-color: lightyellow;
+}
+/*Animation Header*/
+.headerbox {
+  background-color: beige;
+  width: 100%;
+  height: 100px;
+  background: url (logo.png);
+  background-size: 50px 50px;
+}
+
+/*Animate title*/
+
+h1 {
+  font-size: 30px;
+  font-family: cursive;
+}
+
+h2{
+  font-size: 15px;
+}
+
+.titlebox {
+  float: right;
+  top: 5px;
+  bottom: 10px;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  animation-name: titleshow;
+  animation-duration: 10s;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+}
+
+.title1 {
+  height: 50%
+}
+
+.title2{
+  height: 50%
+}
+
+@keyframes titleshow {
+  0% {margin-top: 1px;}
+  25% {margin-top: 15px;}
+  50% {margin-top: 1px;}
+  100% {margin-top: 15px;}
+}
+
+
+/*Logo Animation*/
+
+.logo {
+  display: block;
+  border: 2px solid olive;
+  border-radius: 15px;
+  float: left;
+  padding-left: 5px;
+  margin-left:auto;
+  height: 100%;
+  width: 30%;
+  animation-name: logoshow;
+  animation-duration: 15s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes logoshow {
+  0% {height: 100%; width: 30%; }
+  16% {height: 75%; width: 20%; }
+  33% {height: 50%; width: 10%; }
+  49% {height: 25%; width: 5%; }
+  65% {height: 50%; width: 10%;}
+  81% {height: 75%; width: 20%;}
+  100% {height: 100%; width: 30%;}
+}
+
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*slide show*/
+.slideshowcontainer {
+  border: 2px solid red;
+  width: 100%;
+  height: 30px;
+  overflow:hidden;
+}
+
+.slide-wrapper {
+  width: 300%;
+  height: 100%;
+  animation-name: slideshow;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+.slide1 {
+  background-color: olive;
+  width: 33.33%;
+  float: left;
+  height: 30px;
+  }
+
+.slide2 {
+    background-color: red;
+    width: 33.33%;
+    float: left;
+    height: 30px;
+    }
+
+.slide3 {
+      background-color: blue;
+      width: 33.33%;
+      float: left;
+      height: 30px;
+      }
+
+@keyframes slideshow {
+  0% {margin-left: 0;}
+  25% {margin-left: 25%;}
+  50% {margin-left: 50%;}
+  100% {margin-left: 100%;}
+}
+
+/* Hero Image */
+
+.main {
+  padding: 0;
+  margin: 0;
+  height:500px;
+  width: 100%;
+  position: relative;
+  border: 2px solid black;
+  height: 500px;
+}
+
+.main > img {
+  width: 100%;
+  height:100%;
+}
+
+.mainbox {
+  padding: 5px;
+  margin: 10px;
+  border:3px solid white;
+  width: 40%;;
+  height: 100px;
+  background-color: grey;
+  text-align: center;
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: white;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+h3 {
+  font-size: 12px;
+  font-family: monospace;
+  color: black;
+}
+
+
+/*Two Images*/
+
+.secondcontainer {
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  padding-left: 10px;
+}
+
+.imagecontainer {
+  padding: 5px;
+  width: 40%;
+  position: relative;
+  left: 100px;
+  margin left: 10%;
+  padding-left: 20px;
+  color: olive;
+  height: 200px;
+}
+
+.imagecontainer img {
+  width: 100%;
+  height: 200px;
+  opacity: .5;
+}
+
+.smallbox {
+  padding: 8px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  border: 1px solid yellow;
+  margin: 5px;
+  top: 15px;
+  left: 45px;
+  color: white;
+  position: absolute;
+  width: 200px;
+  height: 60px;
+
+}
+
+
+/*--Gift Set One--*/
+.giftsetbreak{
+  padding: 15px;
+  margin: 5px;
+  border: 2px;
+  width: 100%;
+  height:250px;
+  border: 2px solid lightyellow;
+  position: relative;
+}
+
+h4, p {
+  font-size: 15px;
+}
+
+.Gift11, .Gift12, .Gift13 {
+  text-align: center;
+  padding-left: 10px;
+  width: 30%;
+  height:300px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.GiftSetOne {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content:center;
+}
+
+.GiftSetOne img{
+  width: 100%
+}
+#button {
+  background-color: black;
+  color: white;
+}
+
+
+/* M0dal Window*/
+
+.modalZone{
+  margin-bottom: 20%;
+  margin-top: 10%;
+}
+.modalWindow{
+top: 0;
+left:0;
+bottom:0;
+right:0;
+background-color: rgba(99, 107, 105,0.9);
+position: fixed;
+opacity: 0;
+pointer-events: none;
+}
+
+
+.modalWindow:target {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.messageBlock{
+top:30%;
+left:33%;
+width:36%;
+height: 42%;
+border: 2px solid red;
+position: absolute;
+background-color: white;
+}
+
+
+
+/*--Gift Set two*/
+
+.GiftSetTwo{
+  padding: 5px;
+  margin: 0px;
+  border: 0px;
+  height:200px;
+  position: relative;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+.GiftSetTwo img {
+  width: 30%;
+  height: 100%;
+}
+
+
+/*--Footer--*/
+.footerbox {
+  padding: 5px;
+  border: 2px solid black;
+  margin: 10px;
+  width: 100%;
+  height: 450px;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+.fbox1 {
+  padding: 5px;
+  border: 2px solid black;
+  marign: 10px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  left: 30px;
+  top: 5px;
+  display: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.Help, .Account, .Subscribe, .Member {
+  text-align: center;
+  padding-left: 10px;
+  width: 20%;
+  float: left;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.fbox2 {
+  padding: 15px;
+  border: 2px solid black;
+  margin-top: 150px;
+  width: 400px;
+  height: 30px;
+  float: right;
+  text-align: center;
+}
+
+.fbox2 img {
+  width: 10%;
+  height: 10%;
+  padding-right: 30px;
+
+}
+
+.lines {
+  font-size: 5px;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 350px;
+}
