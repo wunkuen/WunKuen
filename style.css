@@ -29,10 +29,16 @@ h2{
   bottom: 10px;
   padding-bottom: 2px;
   margin-bottom: 5px;
-  animation-name: titleshow;
+  animation-name: title1;
   animation-duration: 10s;
-  animation-direction: reverse;
+  animation-direction: normal;
   animation-iteration-count: infinite;
+
+  animation-name: title2;
+  animation-duration: 10s;
+  animation-direction:alternate;
+  animation-iteration-count: infinite;
+
 }
 
 .title1 {
@@ -43,11 +49,18 @@ h2{
   height: 50%
 }
 
-@keyframes titleshow {
+@keyframes title1 {
   0% {margin-top: 1px;}
   25% {margin-top: 15px;}
   50% {margin-top: 1px;}
   100% {margin-top: 15px;}
+}
+
+@keyframes title2 {
+  0% {margin-top: 15x;}
+  25% {margin-top: 1px;}
+  50% {margin-top: 15px;}
+  100% {margin-top: 1px;}
 }
 
 
@@ -258,7 +271,7 @@ h4, p {
   margin-bottom: 20%;
   margin-top: 10%;
 }
-.modalWindow{
+.modalWindow1 {
 top: 0;
 left:0;
 bottom:0;
@@ -266,11 +279,52 @@ right:0;
 background-color: rgba(99, 107, 105,0.9);
 position: fixed;
 opacity: 0;
+-webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+pointer-events: none;
+}
+
+.modalWindow2 {
+top: 0;
+left:0;
+bottom:0;
+right:0;
+background-color: rgba(99, 107, 105,0.9);
+position: fixed;
+opacity: 0;
+-webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+pointer-events: none;
+}
+
+.modalWindow3 {
+top: 0;
+left:0;
+bottom:0;
+right:0;
+background-color: rgba(99, 107, 105,0.9);
+position: fixed;
+opacity: 0;
+-webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
 pointer-events: none;
 }
 
 
-.modalWindow:target {
+.modalWindow1:target {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalWindow2:target {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalWindow3:target {
   opacity: 1;
   pointer-events: all;
 }
@@ -278,8 +332,8 @@ pointer-events: none;
 .messageBlock{
 top:30%;
 left:33%;
-width:36%;
-height: 42%;
+width:45%;
+height: 50%;
 border: 2px solid red;
 position: absolute;
 background-color: white;
